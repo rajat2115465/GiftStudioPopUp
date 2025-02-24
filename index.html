@@ -5,93 +5,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Location Popup</title>
-    <link rel="stylesheet" href="style.css" class="rel">
-    <script src="script.js"></script>
+    <script src="./assets/JS/script.js"></script>
+    <link rel="stylesheet" href="./assets/CSS/style.css" class="rel">
 </head>
+
 <body>
     <div class="background">
         <div class="btn">
-            <button id="drop-down" >Click Here</button>
+            <button id="drop-down">Click Here</button>
         </div>
-    </div>
-    <div class="popup">
-    
-    <div class="popup-container container">
-        <span class="close-btn" >&times;</span>
-        <div class="search-container" >
-            <div class="search-input" id="searchContainer">
-                <input type="text" onclick="showCityList()"  class="search-bar" id="searchBar" placeholder="Search for delivery location">
-                <div id="cityList"></div>
+        <div class="popup">
+            <div class="popup-container container">
+                <div class="navbar">
+                    <span class="close-btn">&times;</span>
+                     <p style="font-size: 20px;margin: 0;">Pick a Delivery Location</p>
+                    <div class="close-btn-mobile"><img src="./assets/left-arrow.png" alt="" id="left-arrow" width="40" height="40"  class="left-arrow"></div>
+                </div>
+                
+                <div class="search-container">
+                    <div class="search-input" id="searchContainer">
+                        <input type="text" onclick="showCityList()" class="search-bar" id="searchBar"
+                            placeholder="Search for delivery location">
+                        <div id="cityList"></div>
+                    </div>
+                </div>
+                <div class="icon-section">
+                    <div>
+                        <img src="./assets/notation-1.png" alt="Occasion">
+                        <p>FOR EVERY OCCASION</p>
+                    </div>
+                    <div>
+                        <img src="./assets/notation-2.png" alt="care">
+                        <p>CURATED WITH CARE</p>
+                    </div>
+                    <div>
+                        <img src="./assets/notation-3.png" alt="love">
+                        <p>PACKAGE WITH LOVE</p>
+                    </div>
+                </div>
+                <h3>Top Cities</h3>
+                <div class="cities">
+                    <div class="top-cities">
+                        <div class="city">
+                            <img src="./assets/cities_icon_1.png" alt="Mumbai">
+                            <p>Mumbai</p>
+                        </div>
+                        <div class="city">
+                            <img src="./assets/cities_icon_2.png" alt="Delhi">
+                            <p>Delhi</p>
+                        </div>
+                        <div class="city">
+                            <img src="./assets/cities_icon_3.png" alt="Gurgaon">
+                            <p>Gurgaon</p>
+                        </div>
+                        <div class="city">
+                            <img src="./assets/cities_icon_4.png" alt="Bangalore">
+                            <p>Bangalore</p>
+                        </div>
+                        <div class="city">
+                            <img src="./assets/cities_icon_5.png" alt="Kolkata">
+                            <p>Kolkata</p>
+                        </div>
+                        <div class="city">
+                            <img src="./assets/cities_icon_6.png" alt="Pune">
+                            <p>Pune</p>
+                        </div>
+                        <div class="city">
+                            <img src="./assets/cities_icon_7.png" alt="Lucknow">
+                            <p>Lucknow</p>
+                        </div>
+                        <div class="city">
+                            <img src="./assets/cities_icon_8.png" alt="Jaipur">
+                            <p>Jaipur</p>
+                        </div>
+                        <div class="city">
+                            <img src="./assets/cities_icon_9.png" alt="Hyderabad">
+                            <p>Hyderabad</p>
+                        </div>
+                        <div class="city">
+                            <img src="./assets/cities_icon_10.png" alt="Ahmedabad">
+                            <p>Ahmedabad</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="other-cities" id="other">
+                        <p>Other Cities</p>
+                    </div>
+                    <div class="city-container" id="cityContainer">
+                    </div>
+                </div>
+                <div class="show-all" id="all">Show All Cities</div>
             </div>
         </div>
-        <div class="icon-section">
-            <div>
-                <img src="notation-1.png" alt="Occasion">
-                <p>FOR EVERY OCCASION</p>
-            </div>
-            <div>
-                <img src="notation-2.png" alt="care">
-                <p>CURATED WITH CARE</p>
-            </div>
-            <div>
-                <img src="notation-3.png" alt="love">
-                <p>PACKAGE WITH LOVE</p>
-            </div>
-        </div>
-        <h3>Top Cities</h3>
-        <div class="top-cities">
-            <div class="city">
-                <img src="cities_icon_1.png" alt="Mumbai">
-                <p>Mumbai</p>
-            </div>
-            <div class="city">
-                <img src="cities_icon_2.png" alt="Delhi">
-                <p>Delhi</p>
-            </div>
-            <div class="city">
-                <img src="cities_icon_3.png" alt="Gurgaon">
-                <p>Gurgaon</p>
-            </div>
-            <div class="city">
-                <img src="cities_icon_4.png" alt="Bangalore">
-                <p>Bangalore</p>
-            </div>
-            <div class="city">
-                <img src="cities_icon_5.png" alt="Kolkata">
-                <p>Kolkata</p>
-            </div>
-            <div class="city">
-                <img src="cities_icon_6.png" alt="Pune">
-                <p>Pune</p>
-            </div>
-            <div class="city">
-                <img src="cities_icon_7.png" alt="Lucknow">
-                <p>Lucknow</p>
-            </div>
-            <div class="city">
-                <img src="cities_icon_8.png" alt="Jaipur">
-                <p>Jaipur</p>
-            </div>
-            <div class="city">
-                <img src="cities_icon_9.png" alt="Hyderabad">
-                <p>Hyderabad</p>
-            </div>
-            <div class="city">
-                <img src="cities_icon_10.png" alt="Ahmedabad">
-                <p>Ahmedabad</p>
-            </div>
-        </div>
-        <div class="city-container" id="cityContainer">
-           
-        </div>
-        <div class="show-all" id="all" >Show All Cities</div>
-    </div>
-</div>
-    <script>
-        
-        
-    </script>
 
+    </div>
 </body>
 
 </html>

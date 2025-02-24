@@ -1,7 +1,5 @@
 
 document.addEventListener("DOMContentLoaded", function () {
-
-    
     const searchBar = document.getElementById('searchBar');
     const cityList = document.getElementById('cityList');
     const cityNames = [
@@ -53,6 +51,8 @@ const cityContainer = document.getElementById("cityContainer");
             cityDiv.innerHTML = `<p>${city}</p>`;
             cityContainer.appendChild(cityDiv);
         });
+
+
 function showCityList() {
     cityNames.forEach(city => {
         let cityOption = document.createElement("div");
@@ -97,6 +97,7 @@ function closeBtn() {
     document.getElementsByClassName("popup")[0].style.display = "none";
 }
 function togglebtn() {
+    document.getElementById("other").style.display = "block";
     const cityContainer = document.querySelector('.city-container');
     cityContainer.classList.toggle('expanded');
     if(cityContainer.classList.contains('expanded'))document.getElementsByClassName('show-all')[0].innerHTML="Hide All Cities"
@@ -105,9 +106,13 @@ function togglebtn() {
 const btn=document.getElementById("drop-down");
 const showall=document.getElementById("all");
 const closeButton=document.getElementsByClassName("close-btn")[0];
+const closeButtonMobile=document.getElementsByClassName("close-btn-mobile")[0];
+
 
 btn.addEventListener("click", popUp);
 closeButton.addEventListener("click",closeBtn);
+closeButtonMobile.addEventListener("click",closeBtn);
+
 showall.addEventListener("click",togglebtn);
 document.querySelectorAll('.city img').forEach(img => {
     img.addEventListener('click', function() {

@@ -1,16 +1,7 @@
 .container{
-    /* display: none; */
     justify-content: center;
     align-items: center;
 }
-body{
-    width: 99%;
-    height: 98vh;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-}
-
 .btn{
     position: absolute;
     top:10px;
@@ -29,8 +20,6 @@ body{
 .popup-container {
     font-family: Arial, sans-serif;
     background-color: #ffffff;
-    /* display: flex; */
-    /* justify-content: center; */
     align-items: center;
     height: 100vh;
     background: #fbeddd;
@@ -41,6 +30,17 @@ body{
     position: fixed;
     height: auto;
 }
+.left-arrow{
+    background-color: white;
+    border-radius: 12px;
+    opacity: .7;
+}
+.close-btn-mobile{
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    display: none;
+}
 .close-btn {
     position: absolute;
     top: 10px;
@@ -48,24 +48,26 @@ body{
     font-size: 30px;
     cursor: pointer;
     display: block;
-   
 }
 input{
-    background-image: url(search-icon.png);
+    background-image: url("../search-icon.png");
     background-repeat: no-repeat;
     background-size: 25px;
     background-position: left 15px center;
 
+
+}
+#left-arrow{
+    width: 38px;
 }
 .search-input{
     position: relative;
     margin: 20px 0;
-
 }
 .search-input::before {
     content: "";
     position:absolute;
-    left: 79px; 
+    left: 55px; 
     top: 50%;
     height: 27px;
     width: 3px;
@@ -73,7 +75,7 @@ input{
     transform: translateY(-50%);
 }
 .search-bar {
-    width: 85%;
+    width: calc(100% - 80px);
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -99,7 +101,7 @@ h3{
 .top-cities {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     gap: 9px;
     margin-top: 10px;
 }
@@ -130,8 +132,6 @@ h3{
     overflow: hidden; 
     display: flex;
     flex-wrap: wrap;
- 
-    /* transition: height 0.3s ease-in-out;  */
 }
 .city-container.expanded {
     height: 200px; 
@@ -144,7 +144,6 @@ h3{
     left: 35px;
     background: white;
     border: 1px solid #ccc;
-    /* border-radius: 5px; */
     max-height: 200px;
     overflow-y: auto;
     display: none;
@@ -179,3 +178,48 @@ h3{
     margin: 0 0;
     padding: 5px;
 }
+#other{
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        margin: 0;
+        padding: 0;
+      width: 100%;
+    }
+    .background{
+        position: relative;
+    }
+    .popup{
+        padding: 15px;
+        width: 100%;
+    }
+    .popup-container {
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+    .city-container{
+        height: auto;
+        display: block;
+    }
+    .show-all{
+        display: none;
+    }
+    .city-container.expanded {
+        height: auto;
+        overflow-y: unset;
+      }
+    #other{
+        display: block;
+        text-align: left;
+    }
+    .close-btn{
+        display: none;
+    }
+    .close-btn-mobile{
+        display: block;
+    }
+    
+  }
